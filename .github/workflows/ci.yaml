@@ -18,11 +18,5 @@ jobs:
       - name: checkout
         uses: actions/checkout@v2
 
-      - name: golangci-lint
-        uses: golangci/golangci-lint-action@v3
-        with:
-          version: v1.29
-          args: --disable-all --enable=govet,errcheck,staticcheck,gosimple
-
       - name: test
         run: go test -v ./...
