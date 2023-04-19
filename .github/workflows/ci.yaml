@@ -10,9 +10,10 @@ jobs:
 
     steps:
       - name: setup go
-        uses: actions/setup-go@v2
+        uses: actions/setup-go@v4
         with:
-          go-versions: 1.x
+          go-versions: 1.7
+          cache: false
 
       - name: checkout
         uses: actions/checkout@v2
